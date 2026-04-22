@@ -11,3 +11,9 @@ class TaskManager:
             "priority": priority
         }
         self.tasks.append(task)
+        
+        def deleteTask(self, task_id):
+            """
+        Deletes a task by its ID.
+        """
+        self.tasks = [task for task in self.tasks if task["id"] != task_id]
